@@ -2,7 +2,7 @@ from ..datastructures import TypedList
 from ..components import Component, Transform
 
 class GameObject:
-    ID_COUNTER = 0
+    _ID_COUNTER = 0
 
     """
     A holder for components that are in the game. By default, a game object has a transform component.
@@ -67,7 +67,7 @@ class GameObject:
         Assigns an ID to the game object.
         """
         self._id = GameObject.ID_COUNTER
-        GameObject.ID_COUNTER += 1
+        GameObject._ID_COUNTER += 1
 
     def __str__(self) -> str:
         """
